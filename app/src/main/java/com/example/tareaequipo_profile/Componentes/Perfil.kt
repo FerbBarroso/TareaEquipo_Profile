@@ -73,13 +73,13 @@ fun Perfil() {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(50.dp)
+                        .height(40.dp)
                         .background(Color(0xFF113858))
                 ) {
                     Image(
                         painter = painterResource(R.drawable.banner),
                         contentDescription = "Banner de Información (Azul con Blanco)",
-                        contentScale = ContentScale.Fit,
+                        contentScale = ContentScale.Crop,
                         modifier = Modifier.fillMaxSize()
                     )
                 }
@@ -183,7 +183,7 @@ fun Perfil() {
                             imageVector = Icons.Filled.PersonAdd,
                             contentDescription = "Botón de Follow",
                             tint = Color.White,
-                            modifier = Modifier.size(15.dp)
+                            modifier = Modifier.size(20.dp)
                         )
                         Spacer(modifier = Modifier.width(5.dp))
                         Text(
