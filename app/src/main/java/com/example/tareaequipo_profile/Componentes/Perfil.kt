@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -19,9 +20,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.FormatPaint
+import androidx.compose.material.icons.filled.MailOutline
+import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -52,7 +57,7 @@ fun Perfil() {
         //Sección de Encabezado
         Box(
             modifier = Modifier.fillMaxWidth(),
-            contentAlignment = Alignment.BottomCenter
+            contentAlignment = Alignment.TopCenter
         ) {
             Column(
                 modifier = Modifier.fillMaxWidth()
@@ -68,13 +73,13 @@ fun Perfil() {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(70.dp)
-                        .background(Color(0xFF1565C0))
+                        .height(50.dp)
+                        .background(Color(0xFF113858))
                 ) {
                     Image(
                         painter = painterResource(R.drawable.banner),
                         contentDescription = "Banner de Información (Azul con Blanco)",
-                        contentScale = ContentScale.Crop,
+                        contentScale = ContentScale.Fit,
                         modifier = Modifier.fillMaxSize()
                     )
                 }
@@ -141,21 +146,21 @@ fun Perfil() {
             ) {
                 Box(
                     modifier = Modifier
-                        .height(40.dp)
-                        .background(Color(0xFF1565C0), shape = RoundedCornerShape(8.dp))
-                        .padding(horizontal = 15.dp),
+                        .height(38.dp)
+                        .background(Color(0xFF0D65FB), shape = RoundedCornerShape(8.dp))
+                        .padding(horizontal = 10.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            imageVector = Icons.Default.Email,
+                            imageVector = Icons.AutoMirrored.Filled.Message,
                             contentDescription = "Botón de Enviar Mensaje por Messenger",
                             tint = Color.White,
-                            modifier = Modifier.size(20.dp)
+                            modifier = Modifier.size(15.dp)
                         )
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(5.dp))
                         Text(
                             text = "Mensaje",
                             color = Color.White,
@@ -166,21 +171,21 @@ fun Perfil() {
                 }
                 Box(
                     modifier = Modifier
-                        .height(40.dp)
+                        .height(38.dp)
                         .background(Color(0xFF3B3D3E), shape = RoundedCornerShape(8.dp))
-                        .padding(horizontal = 15.dp),
+                        .padding(horizontal = 10.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            imageVector = Icons.Default.Add,
+                            imageVector = Icons.Filled.PersonAdd,
                             contentDescription = "Botón de Follow",
                             tint = Color.White,
-                            modifier = Modifier.size(20.dp)
+                            modifier = Modifier.size(15.dp)
                         )
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(5.dp))
                         Text(
                             text = "Seguir",
                             color = Color.White,
@@ -191,9 +196,9 @@ fun Perfil() {
                 }
                 Box(
                     modifier = Modifier
-                        .height(40.dp)
+                        .height(38.dp)
                         .background(Color(0xFF3B3D3E), shape = RoundedCornerShape(8.dp))
-                        .padding(horizontal = 15.dp),
+                        .padding(horizontal = 10.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     Row(
@@ -205,7 +210,7 @@ fun Perfil() {
                             tint = Color.White,
                             modifier = Modifier.size(20.dp)
                         )
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(5.dp))
                         Text(
                             text = "Buscar",
                             color = Color.White,
@@ -218,18 +223,18 @@ fun Perfil() {
             Spacer(modifier = Modifier.height(25.dp))
             // Descripción de la Página
             Text(
-                text = "En Multiservicios Castan ofrecemos todo tipo de servicios para \n el mantenimiento y reparación del hogar en Tampico, \n Tamaulipas. Desde aire acondicionado, pintura, plomería y \n electricidad, hasta albañilería, herrería e impermeabilizado.",
+                text = "En Multiservicios Castan ofrecemos todo tipo de servicios para el mantenimiento y reparación del hogar en Tampico, \n Tamaulipas. Desde aire acondicionado, pintura, plomería y \n electricidad, hasta albañilería, herrería e impermeabilizado.",
                 color = Color(0xFFB0B0B0),
                 fontSize = 14.sp,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(horizontal = 3.2.dp)
+                modifier = Modifier.padding(horizontal = 15.dp)
             )
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Icon(
-                    imageVector = Icons.Default.AddCircle,
+                    imageVector = Icons.Filled.FormatPaint,
                     contentDescription = "Ícono de Pintura de Casas",
                     tint = Color.Gray,
                     modifier = Modifier.size(14.dp)
